@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "OnCarVManager.Infra.Data/1.0.0": {
+        "dependencies": {
+          "OnCarVManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "OnCarVManager.Infra.Data.dll": {}
+        }
+      },
+      "OnCarVManager.Application.Abstraction/1.0.0": {
+        "runtime": {
+          "OnCarVManager.Application.Abstraction.dll": {}
+        }
+      },
+      "OnCarVManager.Domain/1.0.0": {
+        "dependencies": {
+          "OnCarVManager.Application.Abstraction": "1.0.0"
+        },
+        "runtime": {
+          "OnCarVManager.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OnCarVManager.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnCarVManager.Application.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnCarVManager.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

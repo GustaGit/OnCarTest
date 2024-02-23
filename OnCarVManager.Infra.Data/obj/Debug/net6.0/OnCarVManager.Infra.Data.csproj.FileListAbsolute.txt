@@ -1,0 +1,17 @@
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Infra.Data.deps.json
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Infra.Data.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Infra.Data.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Application.Abstraction.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Domain.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Domain.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\bin\Debug\net6.0\OnCarVManager.Application.Abstraction.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.AssemblyInfo.cs
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.csproj.CopyComplete
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\refint\OnCarVManager.Infra.Data.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\OnCarVManager.Infra.Data.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Infra.Data\obj\Debug\net6.0\ref\OnCarVManager.Infra.Data.dll
