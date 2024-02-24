@@ -26,18 +26,20 @@ namespace OnCarVManager.Application.Abstraction.Repository
             return await _dbSet.FindAsync(id);
         }
 
-        public Task<bool> Delete(int id)
+        public Task Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> AddAsync(T entity)
+        public async Task AddAsync(T entity)
         {
-            throw new NotImplementedException();
+            await _dbSet.AddAsync(entity);
+            await _context.SaveChangesAsync();
+            
         }
 
 
-        public Task<bool> Update(T entity)
+        public Task Update(T entity)
         {
             throw new NotImplementedException();
         }

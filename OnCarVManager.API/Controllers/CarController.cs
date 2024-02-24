@@ -10,7 +10,7 @@ namespace OnCarVManager.API.Controllers
     public class CarController : ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Car>>> GetAll([FromServices] ICarService service)
+        public async Task<ActionResult<IEnumerable<Car>>> GetAllCars([FromServices] ICarService service)
         {
             try
             {
@@ -23,11 +23,26 @@ namespace OnCarVManager.API.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post()
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Car>> GetCarById([FromServices] ICarService service, int id)
         {
             try
             {
+                var car = await service.GetCarById(id);
+                return Ok(car);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCar([FromServices] ICarService service, Car car)
+        {
+            try
+            {
+                await service.AddCar(car);
                 return Ok(true);
             }
             catch (Exception ex)
@@ -37,10 +52,11 @@ namespace OnCarVManager.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete()
+        public async Task<IActionResult> RemoveCar([FromServices]ICarService service, int id)
         {
             try
             {
+                await service.RemoveCar(id);
                 return Ok(true);
             }
             catch (Exception ex)
@@ -49,17 +65,6 @@ namespace OnCarVManager.API.Controllers
             }
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Put()
-        {
-            try
-            {
-                return Ok(true);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
-        }
+        
     }
 }
