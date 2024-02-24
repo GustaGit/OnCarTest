@@ -7,13 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OnCarVManager.Application.Abstraction\OnCarVManager.Application.Abstraction.csproj" />
     <ProjectReference Include="..\OnCarVManager.Domain\OnCarVManager.Domain.csproj" />
     <ProjectReference Include="..\OnCarVManager.Infra.Data\OnCarVManager.Infra.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

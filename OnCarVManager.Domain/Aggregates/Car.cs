@@ -8,9 +8,10 @@ namespace OnCarVManager.Domain.Aggregates
 {
     public class Car 
     {
-        string model { get; set; }
-        string brand { get; set; }
-        string color { get; set; }
+        public int id { get; set; }
+        public string model { get; set; }
+        public string brand { get; set; }
+        public string color { get; set; }
 
     }
 }

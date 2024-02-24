@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OnCarVManager.Domain.Aggregates;
 using OnCarVManager.Domain.Interface;
 using OnCarVManager.Domain.Response;
 
@@ -9,7 +10,7 @@ namespace OnCarVManager.API.Controllers
     public class CarController : ControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<List<CarResponse>>> GetAll([FromServices] ICarService service)
+        public async Task<ActionResult<IEnumerable<Car>>> GetAll([FromServices] ICarService service)
         {
             try
             {

@@ -7,27 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "OnCarVManager.Domain/1.0.0": {
-        "dependencies": {
-          "OnCarVManager.Application.Abstraction": "1.0.0"
-        },
         "runtime": {
           "OnCarVManager.Domain.dll": {}
-        }
-      },
-      "OnCarVManager.Application.Abstraction/1.0.0": {
-        "runtime": {
-          "OnCarVManager.Application.Abstraction.dll": {}
         }
       }
     }
   },
   "libraries": {
     "OnCarVManager.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "OnCarVManager.Application.Abstraction/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
