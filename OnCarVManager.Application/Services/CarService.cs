@@ -27,9 +27,14 @@ namespace OnCarVManager.Application.Services
             await _carRepository.AddAsync(car);
         }
 
-        public async Task RemoveCar(int carId)
+        public async Task<bool> RemoveCar(int carId)
         {
-            await _carRepository.Delete(carId);
+            var car = await _carRepository.GetByIdAsync(carId);
+            if (car == null) return false;
+            await _carRepository.Delete(car);
+                return true;
+
+
         }
     }
 }

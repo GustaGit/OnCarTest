@@ -9,7 +9,7 @@ namespace OnCarVManager.Domain.Interface
         Task<IEnumerable<Car>> GetAllCars();
         Task<Car?> GetCarById(int carId);
         Task AddCar(Car car);
-        Task RemoveCar(int carId);
+        Task<bool> RemoveCar(int carId);
 
     }
 }

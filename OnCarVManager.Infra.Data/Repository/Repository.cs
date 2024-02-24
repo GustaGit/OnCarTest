@@ -26,16 +26,17 @@ namespace OnCarVManager.Application.Abstraction.Repository
             return await _dbSet.FindAsync(id);
         }
 
-        public Task Delete(int id)
+        public virtual async Task Delete(T entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
             await _context.SaveChangesAsync();
-            
+
         }
 
 

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnCarVManager.Domain.Aggregates;
 using OnCarVManager.Domain.Interface;
-using OnCarVManager.Domain.Response;
 
 namespace OnCarVManager.API.Controllers
 {
@@ -17,9 +16,9 @@ namespace OnCarVManager.API.Controllers
                 var cars = await service.GetAllCars();
                 return Ok(cars);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return BadRequest(ex);
+                return BadRequest("Erro ao buscar os veículos");
             }
         }
 
@@ -31,37 +30,40 @@ namespace OnCarVManager.API.Controllers
                 var car = await service.GetCarById(id);
                 return Ok(car);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return BadRequest(ex);
+                return BadRequest("Erro ao buscar um veículo");
             }
         }
 
         [HttpPost]
         public async Task<IActionResult> AddCar([FromServices] ICarService service, Car car)
         {
+            if (car == null) return BadRequest("Dados Inválidos");
+
             try
             {
                 await service.AddCar(car);
-                return Ok(true);
+                return Ok("Veículo adicionado com Sucesso");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return BadRequest(ex);
+                return BadRequest("Dados Inválidos");
             }
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveCar([FromServices]ICarService service, int id)
         {
+            if (id <= 0) return BadRequest("Veículo inválido");
             try
             {
                 await service.RemoveCar(id);
-                return Ok(true);
+                return Ok("Veículo removido com sucesso");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return BadRequest(ex);
+                return BadRequest("Veículo Inválido");
             }
         }
 
