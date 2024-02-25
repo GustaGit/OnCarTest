@@ -53,7 +53,7 @@ namespace OnCarVManager.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveCar([FromServices]ICarService service, int id)
+        public async Task<IActionResult> RemoveCar([FromServices]ICarService service,[FromBody] int id)
         {
             if (id <= 0) return BadRequest("Veículo inválido");
             try
