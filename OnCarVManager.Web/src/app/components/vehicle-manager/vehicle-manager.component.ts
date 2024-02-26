@@ -28,6 +28,10 @@ export class VehicleManagerComponent implements OnInit {
     this.showAddCar = !this.showAddCar;
   }
 
+  updateCarList(cars : Car[]){
+    this.carList = cars;
+  }
+
   addCar(event:Car){
     this.showAddCarForm();
     this.carService.AddCar(event).subscribe((cars:Car[])=>{

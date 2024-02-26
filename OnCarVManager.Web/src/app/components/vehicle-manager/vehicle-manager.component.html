@@ -11,7 +11,7 @@
                 Adicionar carro
             </button>
         </div>
-        <app-add-car-form *ngIf="showAddCar" (addCarEmmiter)="addCar($event)"></app-add-car-form>
+        <app-add-car-form *ngIf="showAddCar" (addCarEmmiter)="updateCarList($event)" (closeAddCarFormEmmiter)="showAddCarForm()"></app-add-car-form>
 
     </div>
 
