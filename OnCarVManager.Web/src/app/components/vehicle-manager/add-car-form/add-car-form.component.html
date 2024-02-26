@@ -1,32 +1,38 @@
-<form [formGroup]="addCarForm" class="row py-3 mx-4 my-2 border justify-content-center rounded" >
+<form [formGroup]="addCarForm" class="row py-3 mx-4 my-2 border justify-content-center rounded">
     <div class="col-12 col-md-5 justify-content-center">
         <div class="mb-2">
             <label for="carModel" class="form-label">Modelo</label>
-            <input formControlName="model" type="text" class="form-control" id="carModel"[ngClass]="{'invalid':addCarForm.get('model')?.errors  && (addCarForm.get('model')?.dirty || addCarForm.get('model')?.touched) }" />
-            <div *ngIf="addCarForm.controls['model']?.invalid && (addCarForm.controls['model']?.dirty || addCarForm.controls['model']?.touched)" class="invalid">
+            <input formControlName="model" type="text" class="form-control" id="carModel"
+                [ngClass]="{'invalid':addCarForm.get('model')?.errors  && (addCarForm.get('model')?.dirty || addCarForm.get('model')?.touched) }" />
+            <div *ngIf="addCarForm.controls['model']?.invalid && (addCarForm.controls['model']?.dirty || addCarForm.controls['model']?.touched)"
+                class="invalid">
                 Campo Obrigatório
-              </div>
+            </div>
         </div>
 
         <div class="mb-2">
             <label for="carBrand" class="form-label">Marca</label>
             <input formControlName="brand" type="text" class="form-control" id="carBrand"
-            [ngClass]="{'invalid':addCarForm.get('brand')?.errors  && (addCarForm.get('brand')?.dirty || addCarForm.get('brand')?.touched) }" />
-            <div *ngIf="addCarForm.controls['brand']?.invalid && (addCarForm.controls['brand']?.dirty || addCarForm.controls['brand']?.touched)" class="invalid">
+                [ngClass]="{'invalid':addCarForm.get('brand')?.errors  && (addCarForm.get('brand')?.dirty || addCarForm.get('brand')?.touched) }" />
+            <div *ngIf="addCarForm.controls['brand']?.invalid && (addCarForm.controls['brand']?.dirty || addCarForm.controls['brand']?.touched)"
+                class="invalid">
                 Campo Obrigatório
-              </div>
+            </div>
         </div>
 
         <div class="mb-2">
             <label for="carColor" class="form-label">Cor</label>
-            <input formControlName="color" type="text" class="form-control" id="carColor"[ngClass]="{'invalid':addCarForm.get('color')?.errors  && (addCarForm.get('color')?.dirty || addCarForm.get('color')?.touched) }" />
-            <div *ngIf="addCarForm.controls['color']?.invalid && (addCarForm.controls['color']?.dirty || addCarForm.controls['color']?.touched)" class="invalid">
+            <input formControlName="color" type="text" class="form-control" id="carColor"
+                [ngClass]="{'invalid':addCarForm.get('color')?.errors  && (addCarForm.get('color')?.dirty || addCarForm.get('color')?.touched) }" />
+            <div *ngIf="addCarForm.controls['color']?.invalid && (addCarForm.controls['color']?.dirty || addCarForm.controls['color']?.touched)"
+                class="invalid">
                 Campo Obrigatório
-              </div>
+            </div>
         </div>
     </div>
 
     <div class="row justify-content-center my-2">
-        <button type="button" [disabled]="!this.addCarForm.valid" class="btn btn-secondary col-5" (click)="ConfirmClick()">Confirmar</button>
+        <button type="button" [disabled]="!this.addCarForm.valid" class="btn btn-secondary col-5"
+            (click)="ConfirmClick()">Confirmar</button>
     </div>
 </form>

@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Car } from 'src/app/models/car';
 import { VehicleManagerService } from 'src/app/services/vehicle-manager/vehicle-manager.service';
 import Swal from 'sweetalert2';
-import { CustomModalComponent } from './custom-modal/custom-modal.component';
+import { CustomModalComponent } from '../custom-modal/custom-modal.component';
 
 @Component({
   selector: 'app-vehicle-manager',

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Car } from 'src/app/models/car';
-import { environments } from '../../environments/environments'
+import { Constants } from '../constants';
 
 
 @Injectable({
@@ -15,18 +15,18 @@ export class VehicleManagerService {
   constructor(private httpClient: HttpClient) { }
 
   public GetAllCars():Observable<Car[]>{
-    return this.httpClient.get<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`) 
+    return this.httpClient.get<Car[]>(`${Constants.API_BASE_URL}/${this.controllerUrl}`) 
   }
 
   public GetCarById(carId : number):Observable<Car>{
-    return this.httpClient.get<Car>(`${environments.apiUrl}/${this.controllerUrl}/${carId}`)
+    return this.httpClient.get<Car>(`${Constants.API_BASE_URL}/${this.controllerUrl}/${carId}`)
   }
 
   public AddCar(car:Car):Observable<Car[]>{
-    return this.httpClient.post<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`,car)
+    return this.httpClient.post<Car[]>(`${Constants.API_BASE_URL}/${this.controllerUrl}`,car)
   }
 
   public RemoveCar(car:Car):Observable<Car[]>{
-    return this.httpClient.delete<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`, {body:car.id})
+    return this.httpClient.delete<Car[]>(`${Constants.API_BASE_URL}/${this.controllerUrl}`, {body:car.id})
   }
 }
