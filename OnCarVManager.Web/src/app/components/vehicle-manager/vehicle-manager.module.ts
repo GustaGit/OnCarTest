@@ -6,6 +6,8 @@ import { CreditSolicitationComponent } from './credit-solicitation/credit-solici
 import { FinanceSimulatorComponent } from './finance-simulator/finance-simulator.component';
 import { VehicleManagerService } from 'src/app/services/vehicle-manager/vehicle-manager.service';
 import { FinanceSimulatorService } from 'src/app/services/vehicle-manager/finance-simulator.service';
+import { AddCarFormComponent } from './add-car-form/add-car-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,10 +15,12 @@ import { FinanceSimulatorService } from 'src/app/services/vehicle-manager/financ
   declarations: [
     VehicleManagerComponent,
     CreditSolicitationComponent,
-    FinanceSimulatorComponent
+    FinanceSimulatorComponent,
+    AddCarFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
    providers: [
     VehicleManagerService,
