@@ -6,12 +6,12 @@
     </div>
     <div class="row">
         <div class="text-end">
-            <button class="btn btn-outline-secondary col-12 col-md-3 " (click)="showAddCarForm()">
+            <button class="btn btn-outline-secondary col-12 col-md-3 " (click)="ShowAddCarForm()">
                 <i class="bi bi-plus-lg"></i>
                 Adicionar carro
             </button>
         </div>
-        <app-add-car-form *ngIf="showAddCar" (addCarEmmiter)="updateCarList($event)" (closeAddCarFormEmmiter)="showAddCarForm()"></app-add-car-form>
+        <app-add-car-form *ngIf="showAddCar" (addCarEmmiter)="UpdateCarList($event)" (closeAddCarFormEmmiter)="ShowAddCarForm()"></app-add-car-form>
 
     </div>
 
@@ -24,6 +24,7 @@
                     <th>Modelo</th>
                     <th>Marca</th>
                     <th>Cor</th>
+                    <th>Opções</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,6 +33,11 @@
                     <td>{{car.model}}</td>
                     <td>{{car.brand}}</td>
                     <td>{{car.color}}</td>
+                    <td>
+                        <button class="btn btn-outline-danger btn-sm" (click)="RemoveCar(car)">
+                            <i class="bi bi-trash"></i> 
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

@@ -34,10 +34,10 @@ export class AddCarFormComponent {
       this.addCarEmmiter.emit(cars);
       this.closeAddCarFormEmmiter.emit();
       Swal.fire({
-        titleText: 'Veículo adicionado com sucesso!',
+        titleText: 'Adicionado!',
         icon: 'success',
         showConfirmButton: false,
-        timer: 3000
+        timer: 1500
       })
     })
   }

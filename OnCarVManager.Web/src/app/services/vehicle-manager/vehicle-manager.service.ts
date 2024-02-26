@@ -26,7 +26,7 @@ export class VehicleManagerService {
     return this.httpClient.post<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`,car)
   }
 
-  public RemoveCar(carId:number):Observable<Car[]>{
-    return this.httpClient.delete<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`, {body:carId })
+  public RemoveCar(car:Car):Observable<Car[]>{
+    return this.httpClient.delete<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`, {body:car.id})
   }
 }

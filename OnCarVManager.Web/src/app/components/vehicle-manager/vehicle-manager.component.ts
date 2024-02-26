@@ -14,35 +14,43 @@ import Swal from 'sweetalert2';
 export class VehicleManagerComponent implements OnInit {
 
   carList: Car[] = [];
-  showAddCar:boolean = false;
+  showAddCar: boolean = false;
 
   constructor(private carService: VehicleManagerService) { }
 
   ngOnInit(): void {
-  this.carService.GetAllCars().subscribe((cars:Car[]) => {
-    this.carList = cars;
-  });
+    this.carService.GetAllCars().subscribe((cars: Car[]) => {
+      this.carList = cars;
+    });
   }
 
-  showAddCarForm(){
+  public ShowAddCarForm() {
     this.showAddCar = !this.showAddCar;
   }
 
-  updateCarList(cars : Car[]){
+  public UpdateCarList(cars: Car[]) {
     this.carList = cars;
   }
 
-  addCar(event:Car){
-    this.showAddCarForm();
-    this.carService.AddCar(event).subscribe((cars:Car[])=>{
-      this.carList = cars;
-      Swal.fire({
-        titleText: 'Veículo adicionado com sucesso!',
-        icon:'success',
-        showConfirmButton: false,
-        timer: 3000
-      })
-    })
+  public RemoveCar(car: Car) {
+    Swal.fire({
+      iconHtml: ` <i class="bi bi-trash"></i>  `,
+      iconColor: 'red',
+      title: "Quer mesmo deletar este item?",
+      text: `${car.model} ${car.brand} ${car.color}`,
+      showCancelButton: true,
+      confirmButtonText: "Sim",
+      confirmButtonColor: 'gray',
+      cancelButtonColor: 'red',
+      cancelButtonText: "Não"
+    }).then((result) => {
+      if (result.isConfirmed)
+        this.carService.RemoveCar(car).subscribe((cars: Car[]) => {
+          this.carList = cars;
+          Swal.fire({titleText:'Removido!', showConfirmButton: false, timer:1500, icon:'success'});
+        })
+    });
   }
-} 
+
+}
 
