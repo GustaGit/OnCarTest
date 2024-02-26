@@ -8,6 +8,7 @@ import { VehicleManagerService } from 'src/app/services/vehicle-manager/vehicle-
 import { FinanceSimulatorService } from 'src/app/services/vehicle-manager/finance-simulator.service';
 import { AddCarFormComponent } from './add-car-form/add-car-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CustomModalComponent } from './custom-modal/custom-modal.component';
 
 
 
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     VehicleManagerComponent,
     CreditSolicitationComponent,
     FinanceSimulatorComponent,
-    AddCarFormComponent
+    AddCarFormComponent,
+    CustomModalComponent
   ],
   imports: [
     CommonModule,

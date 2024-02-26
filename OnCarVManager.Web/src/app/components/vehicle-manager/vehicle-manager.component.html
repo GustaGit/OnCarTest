@@ -34,12 +34,21 @@
                     <td>{{car.brand}}</td>
                     <td>{{car.color}}</td>
                     <td>
-                        <button class="btn btn-outline-danger btn-sm" (click)="RemoveCar(car)">
-                            <i class="bi bi-trash"></i> 
-                        </button>
+                        <div class="d-inline-block"> 
+                            <button class="btn btn-outline-danger btn-sm mx-1" (click)="RemoveCar(car)">
+                                <i class="bi bi-trash"></i> 
+                            </button>
+                            <button class="btn btn-outline-success btn-sm mx-1" (click)="OpenModal()">
+                                <i class="bi bi-coin"></i>
+                            </button>
+                        </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+<app-custom-modal>
+    <app-credit-solicitation></app-credit-solicitation>
+</app-custom-modal>

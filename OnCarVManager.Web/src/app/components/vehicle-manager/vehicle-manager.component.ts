@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Car } from 'src/app/models/car';
 import { VehicleManagerService } from 'src/app/services/vehicle-manager/vehicle-manager.service';
 import Swal from 'sweetalert2';
+import { CustomModalComponent } from './custom-modal/custom-modal.component';
 
 @Component({
   selector: 'app-vehicle-manager',
@@ -12,6 +13,9 @@ import Swal from 'sweetalert2';
 })
 
 export class VehicleManagerComponent implements OnInit {
+
+  @ViewChild(CustomModalComponent, { static: true })
+  customModal: CustomModalComponent = new CustomModalComponent; 
 
   carList: Car[] = [];
   showAddCar: boolean = false;
@@ -50,6 +54,10 @@ export class VehicleManagerComponent implements OnInit {
           Swal.fire({titleText:'Removido!', showConfirmButton: false, timer:1500, icon:'success'});
         })
     });
+  }
+
+  public OpenModal(){
+    this.customModal.toggle();
   }
 
 }
