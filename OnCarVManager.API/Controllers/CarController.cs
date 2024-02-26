@@ -37,14 +37,14 @@ namespace OnCarVManager.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCar([FromServices] ICarService service, Car car)
+        public async Task<ActionResult<IEnumerable<Car>>> AddCar([FromServices] ICarService service, Car car)
         {
             if (car == null) return BadRequest("Dados Inválidos");
 
             try
             {
-                await service.AddCar(car);
-                return Ok("Veículo adicionado com Sucesso");
+                var cars = await service.AddCar(car);
+                return Ok(cars);
             }
             catch (Exception)
             {
@@ -53,13 +53,13 @@ namespace OnCarVManager.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveCar([FromServices]ICarService service,[FromBody] int id)
+        public async Task<ActionResult<IEnumerable<Car>>> RemoveCar([FromServices]ICarService service,[FromBody] int id)
         {
             if (id <= 0) return BadRequest("Veículo inválido");
             try
             {
-                await service.RemoveCar(id);
-                return Ok("Veículo removido com sucesso");
+                var cars = await service.RemoveCar(id);
+                return Ok(cars);
             }
             catch (Exception)
             {

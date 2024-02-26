@@ -22,18 +22,18 @@ namespace OnCarVManager.Application.Services
             return await _carRepository.GetByIdAsync(carId);
         }
 
-        public async Task AddCar(Car car)
+        public async Task<IEnumerable<Car>> AddCar(Car car)
         {
             await _carRepository.AddAsync(car);
+            return await _carRepository.GetAllAsync();
         }
 
-        public async Task<bool> RemoveCar(int carId)
+        public async Task<IEnumerable<Car>> RemoveCar(int carId)
         {
             var car = await _carRepository.GetByIdAsync(carId);
-            if (car == null) return false;
-            await _carRepository.Delete(car);
-                return true;
-
+            if (car is not null)
+                await _carRepository.Delete(car);
+            return await _carRepository.GetAllAsync();
 
         }
     }

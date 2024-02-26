@@ -22,11 +22,11 @@ export class VehicleManagerService {
     return this.httpClient.get<Car>(`${environments.apiUrl}/${this.controllerUrl}/${carId}`)
   }
 
-  public AddCar(car:Car):Observable<string>{
-    return this.httpClient.post(`${environments.apiUrl}/${this.controllerUrl}`,car, {responseType: 'text'})
+  public AddCar(car:Car):Observable<Car[]>{
+    return this.httpClient.post<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`,car)
   }
 
-  public RemoveCar(carId:number):Observable<string>{
-    return this.httpClient.delete(`${environments.apiUrl}/${this.controllerUrl}`, {body:carId ,responseType:'text'})
+  public RemoveCar(carId:number):Observable<Car[]>{
+    return this.httpClient.delete<Car[]>(`${environments.apiUrl}/${this.controllerUrl}`, {body:carId })
   }
 }

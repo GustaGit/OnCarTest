@@ -4,17 +4,6 @@
             <h1>Gerenciador de Veículos</h1>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-12">
-            <label for="searchForId">Pesquise pelo id:</label>
-        </div>
-        <div class="col-12">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Insira o id">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
-            </div>
-        </div>
-    </div> -->
     <div class="row">
         <div class="text-end">
             <button class="btn btn-outline-secondary col-12 col-md-3 " (click)="showAddCarForm()">
@@ -38,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let car of carList$ |async">
+                <tr *ngFor="let car of carList">
                     <th>{{car.id}}</th>
                     <td>{{car.model}}</td>
                     <td>{{car.brand}}</td>
@@ -48,4 +37,3 @@
         </table>
     </div>
 </div>
-<!-- <app-finance-simulator></app-finance-simulator> -->
