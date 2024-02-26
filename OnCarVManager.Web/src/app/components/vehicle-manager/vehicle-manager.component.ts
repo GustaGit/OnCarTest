@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
 
 import { Car } from 'src/app/models/car';
 import { VehicleManagerService } from 'src/app/services/vehicle-manager/vehicle-manager.service';
@@ -15,10 +14,10 @@ import { CustomModalComponent } from './custom-modal/custom-modal.component';
 export class VehicleManagerComponent implements OnInit {
 
   @ViewChild(CustomModalComponent, { static: true })
-  customModal: CustomModalComponent = new CustomModalComponent; 
-
+  customModal: CustomModalComponent = new CustomModalComponent;
   carList: Car[] = [];
   showAddCar: boolean = false;
+  showFinanceSimulatorNum: number = -1;
 
   constructor(private carService: VehicleManagerService) { }
 
@@ -28,8 +27,18 @@ export class VehicleManagerComponent implements OnInit {
     });
   }
 
+  public OpenModal() {
+    this.customModal.toggle();
+  }
+
   public ShowAddCarForm() {
     this.showAddCar = !this.showAddCar;
+  }
+
+  public ShowFinanceSimulator(itemNum: number) {
+    if (itemNum !== this.showFinanceSimulatorNum)
+      this.showFinanceSimulatorNum = itemNum;
+    else this.showFinanceSimulatorNum = -1;
   }
 
   public UpdateCarList(cars: Car[]) {
@@ -51,14 +60,11 @@ export class VehicleManagerComponent implements OnInit {
       if (result.isConfirmed)
         this.carService.RemoveCar(car).subscribe((cars: Car[]) => {
           this.carList = cars;
-          Swal.fire({titleText:'Removido!', showConfirmButton: false, timer:1500, icon:'success'});
+          Swal.fire({ titleText: 'Removido!', showConfirmButton: false, timer: 1500, icon: 'success' });
         })
     });
   }
 
-  public OpenModal(){
-    this.customModal.toggle();
-  }
 
 }
 
