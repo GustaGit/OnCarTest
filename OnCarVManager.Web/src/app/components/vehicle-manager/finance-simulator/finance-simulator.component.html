@@ -7,59 +7,11 @@
 
     <div class="row">
         <span style="font-weight: bold ;">Carro selecionado:</span>
-        <p>Fusion Ford Preto</p>
+        <p>{{car.model}} {{car.brand}} {{car.color}}
+        <br>R${{car.price}}
     </div>
 
     <form [formGroup]="formFinanceSimulator" class="form">
-        <div class="row">
-            <div class="col-12 col-md-6 ">
-                <div class="mb-2">
-                    <label for="name" class="form-label">Nome*</label>
-                    <input type="text" class="form-control" id="name" formControlName="name"
-                        [ngClass]="{'invalid':formFinanceSimulator.get('name')?.errors  && (formFinanceSimulator.get('name')?.dirty || formFinanceSimulator.get('name')?.touched) }" />
-                    <div *ngIf="formFinanceSimulator.controls['name']?.invalid && (formFinanceSimulator.controls['name']?.dirty || formFinanceSimulator.controls['name']?.touched)"
-                        class="invalid">
-                        Obrigatório
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 ">
-                <div class="mb-2">
-                    <label for="lastname" class="form-label">Sobrenome*</label>
-                    <input type="text" class="form-control" id="lastname" formControlName="lastname"
-                        [ngClass]="{'invalid':formFinanceSimulator.get('lastname')?.errors  && (formFinanceSimulator.get('lastname')?.dirty || formFinanceSimulator.get('lastname')?.touched) }" />
-                    <div *ngIf="formFinanceSimulator.controls['lastname']?.invalid && (formFinanceSimulator.controls['lastname']?.dirty || formFinanceSimulator.controls['lastname']?.touched)"
-                        class="invalid">
-                        Obrigatório
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="mb-2">
-                    <label for="birthdate" class="form-label">Data de Nascimento*</label>
-                    <input type="date" class="form-control" id="birthdate" formControlName="birthdate"
-                        [ngClass]="{'invalid':formFinanceSimulator.get('birthdate')?.errors  && (formFinanceSimulator.get('birthdate')?.dirty || formFinanceSimulator.get('birthdate')?.touched) }" />
-                    <div *ngIf="formFinanceSimulator.controls['birthdate']?.invalid && (formFinanceSimulator.controls['birthdate']?.dirty || formFinanceSimulator.controls['birthdate']?.touched)"
-                        class="invalid">
-                        Campo Obrigatório
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="mb-2">
-                    <label for="familyIncome" class="form-label">Renda familiar*</label>
-                    <input type="number" class="form-control" id="familyIncome" formControlName="familyIncome"
-                        [ngClass]="{'invalid':formFinanceSimulator.get('familyIncome')?.errors  && (formFinanceSimulator.get('familyIncome')?.dirty || formFinanceSimulator.get('familyIncome')?.touched) }" />
-                    <div *ngIf="formFinanceSimulator.controls['familyIncome']?.invalid && (formFinanceSimulator.controls['familyIncome']?.dirty || formFinanceSimulator.controls['familyIncome']?.touched)"
-                        class="invalid">
-                        Campo Obrigatório
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="mb-2">
@@ -68,17 +20,67 @@
                         [ngClass]="{'invalid':formFinanceSimulator.get('documentCPF')?.errors  && (formFinanceSimulator.get('documentCPF')?.dirty || formFinanceSimulator.get('documentCPF')?.touched) }" />
                     <div *ngIf="formFinanceSimulator.controls['documentCPF']?.invalid && (formFinanceSimulator.controls['documentCPF']?.dirty || formFinanceSimulator.controls['documentCPF']?.touched)"
                         class="invalid">
+                        Obrigatório
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="mb-2">
+                    <label for="birthdate" class="form-label">Data de Nascimento*</label>
+                    <input type="date" class="form-control" id="birthdate" formControlName="birthdate"
+                        [ngClass]="{'invalid':formFinanceSimulator.get('birthdate')?.errors  && (formFinanceSimulator.get('birthdate')?.dirty || formFinanceSimulator.get('birthdate')?.touched) }" />
+                    <div *ngIf="formFinanceSimulator.controls['birthdate']?.invalid && (formFinanceSimulator.controls['birthdate']?.dirty || formFinanceSimulator.controls['birthdate']?.touched)"
+                        class="invalid">
+                        Obrigatório
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 ">
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="email" formControlName="email"
+                        [ngClass]="{'invalid':formFinanceSimulator.get('email')?.errors  && (formFinanceSimulator.get('email')?.dirty || formFinanceSimulator.get('email')?.touched) }" />
+                    <div *ngIf="formFinanceSimulator.controls['email']?.invalid && (formFinanceSimulator.controls['email']?.dirty || formFinanceSimulator.controls['email']?.touched)"
+                        class="invalid">
+                        Obrigatório
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 ">
+                <div class="mb-2">
+                    <label for="phone" class="form-label">Celular*</label>
+                    <input type="tel" class="form-control" id="phone" formControlName="phone"
+                        [ngClass]="{'invalid':formFinanceSimulator.get('phone')?.errors  && (formFinanceSimulator.get('phone')?.dirty || formFinanceSimulator.get('phone')?.touched) }" />
+                    <div *ngIf="formFinanceSimulator.controls['phone']?.invalid && (formFinanceSimulator.controls['phone']?.dirty || formFinanceSimulator.controls['phone']?.touched)"
+                        class="invalid">
+                        Obrigatório
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="mb-2">
+                    <label for="familyIncome" class="form-label">Renda Familiar Bruta*</label>
+                    <input type="number" class="form-control" id="familyIncome" formControlName="familyIncome"
+                        [ngClass]="{'invalid':formFinanceSimulator.get('familyIncome')?.errors  && (formFinanceSimulator.get('familyIncome')?.dirty || formFinanceSimulator.get('familyIncome')?.touched) }" />
+                    <div *ngIf="formFinanceSimulator.controls['familyIncome']?.invalid && (formFinanceSimulator.controls['familyIncome']?.dirty || formFinanceSimulator.controls['familyIncome']?.touched)"
+                        class="invalid">
                         Campo Obrigatório
                     </div>
                 </div>
             </div>
+            
         </div>
 
         <div class="row justify-content-center my-2">
             <button type="button" class="btn btn-success col-12 col-md-5" [disabled]="!formFinanceSimulator.valid" (click)="Simulate()">Confirmar</button>
         </div>
 
-        <!-- <app-simulator-result *ngIf="userSimulation.name" [user]="userSimulation"></app-simulator-result> -->
-        <app-simulator-result [user]="userTest"></app-simulator-result>
+        <app-simulator-result *ngIf="userSimulation.documentCPF" [user]="userSimulation"></app-simulator-result>
     </form>
 </div>

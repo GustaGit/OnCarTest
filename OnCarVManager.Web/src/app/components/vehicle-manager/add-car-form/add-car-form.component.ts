@@ -20,7 +20,8 @@ export class AddCarFormComponent {
     this.addCarForm = new FormGroup({
       model: new FormControl(null, [Validators.required]),
       brand: new FormControl(null, [Validators.required]),
-      color: new FormControl(null, [Validators.required])
+      color: new FormControl(null, [Validators.required]),
+      price: new FormControl(null, [Validators.required])
     })
   }
 

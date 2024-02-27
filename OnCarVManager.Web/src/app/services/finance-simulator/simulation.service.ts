@@ -16,13 +16,15 @@ export class SimulationService {
 
   public AddSimulationTest(simulation:Simulation): User{
 
+    //TODO: Serviço funcionar
     return {
-      name:simulation.name,
-      lastname:simulation.lastname,
+      documentCPF: simulation.documentCPF,
+      email: simulation.email,
+      phone:simulation.phone,
       birthdate: simulation.birthdate,
       familyIncome: simulation.familyIncome,
-      documentCPF: simulation.documentCPF,
-      score:900
+      carPrice:50000,
+      score:500
     }
   }
 

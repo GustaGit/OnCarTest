@@ -12,18 +12,14 @@ export class SimulatorResultComponent implements OnInit {
   @Input() user: User = new User();
   installmentsPossibleTemplate: string[] = [];
   downPaymentValue: string = '';
-  carValueTest: number = 0;
   showInstallments: boolean = true;
-
 
   constructor(private constants: SimulatorConstants) {
   }
 
   ngOnInit(): void {
-    // Car value para teste
-    this.carValueTest = 50000;
-    this.downPaymentValue = this.SetDownPaymentValue(this.carValueTest, this.user);
-    this.InstallmentsPossibleStrings(this.carValueTest,this.user);
+    this.downPaymentValue = this.SetDownPaymentValue(this.user);
+    this.InstallmentsPossibleStrings(this.user);
   }
 
   public SetPercentageFromScore(score: number): number[] {
@@ -35,7 +31,7 @@ export class SimulatorResultComponent implements OnInit {
     return [];
   }
 
-  public SetDownPaymentValue(carValue: number, user: User): string {
+  public SetDownPaymentValue(user: User): string {
     let percentage = this.SetPercentageFromScore(user.score)[0];
     if (percentage == undefined) return this.constants.ERROR_MESSAGE;
     if (percentage == 100) {
@@ -44,25 +40,23 @@ export class SimulatorResultComponent implements OnInit {
     }
     if (percentage == 0)
       return this.constants.FULL_FINANCE_MESSAGE;
-    return ('R$' + ((carValue * percentage) / 100));
+    return ('R$' + ((user.carPrice * percentage) / 100));
   }
 
-  public InstallmentsPossibleStrings(carValue: number, user:User): string[] {
-    let installmentsPossible = this.GetInstallmentsPossible(user, carValue);
+  public InstallmentsPossibleStrings(user:User): string[] {
+    let installmentsPossible = this.GetInstallmentsPossible(user);
     let valuePayInstallment: number;
     installmentsPossible.forEach((installment) => {
-      valuePayInstallment = (carValue / installment);
+      valuePayInstallment = (user.carPrice / installment);
       this.installmentsPossibleTemplate.push(`${installment}x de R$${valuePayInstallment.toFixed(2)}`)
     })
     return this.installmentsPossibleTemplate;
   }
 
-  public GetInstallmentsPossible(user:User,carValue:number): number[] {
+  public GetInstallmentsPossible(user:User): number[] {
     let percentageLimit = this.SetPercentageFromScore(user.score)[1];
     if (percentageLimit == 100) return this.constants.INSTALLMENTS; 
     let payFinanceLimit = ((percentageLimit * user.familyIncome) / 100);
-    return this.constants.INSTALLMENTS.filter((installment) => ((carValue / installment) < payFinanceLimit));
+    return this.constants.INSTALLMENTS.filter((installment) => ((user.carPrice / installment) < payFinanceLimit));
   }
-
-
 }

@@ -29,6 +29,15 @@
                 Campo Obrigatório
             </div>
         </div>
+        <div class="mb-2">
+            <label for="carPrice" class="form-label">Preço</label>
+            <input formControlName="price" type="text" class="form-control" id="carPrice"
+                [ngClass]="{'invalid':addCarForm.get('price')?.errors  && (addCarForm.get('price')?.dirty || addCarForm.get('price')?.touched) }" />
+            <div *ngIf="addCarForm.controls['price']?.invalid && (addCarForm.controls['price']?.dirty || addCarForm.controls['price']?.touched)"
+                class="invalid">
+                Campo Obrigatório
+            </div>
+        </div>
     </div>
 
     <div class="row justify-content-center my-2">

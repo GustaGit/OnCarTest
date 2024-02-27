@@ -3,4 +3,5 @@ export class Car {
     brand:string = "";
     model:string = "";
     color:string = "";
+    price:number =0;
 }

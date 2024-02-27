@@ -25,6 +25,7 @@
                     <th>Modelo</th>
                     <th>Marca</th>
                     <th>Cor</th>
+                    <th>Preço</th>
                     <th>Opções</th>
                 </tr>
             </thead>
@@ -34,22 +35,22 @@
                     <td>{{car.model}}</td>
                     <td>{{car.brand}}</td>
                     <td>{{car.color}}</td>
+                    <td>{{car.price}}</td>
                     <td>
                         <div class="d-inline-flex gap-1">
                             
                             <button class="btn btn-outline-danger btn-sm" (click)="RemoveCar(car)">
                                 <i class="bi bi-trash"></i>
                             </button>
-                            <button class="btn btn-outline-success btn-sm" data-bs-toggle="button"
+                            <button class="btn btn-outline-success btn-sm"
                                 (click)="ShowFinanceSimulator(i)">
                                 <i class="bi bi-coin"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <!-- <div *ngIf="i == showFinanceSimulatorNum"> -->
+                        <div *ngIf="i == showFinanceSimulatorNum">
                             <br>
-                            <app-finance-simulator></app-finance-simulator>
+                            <app-finance-simulator [car]="carList[i]"></app-finance-simulator>
                         </div>
                     </td>
                 </tr>
