@@ -1,0 +1,12 @@
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\bin\Debug\net6.0\OnCarVManager.Domain.deps.json
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\bin\Debug\net6.0\OnCarVManager.Domain.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\bin\Debug\net6.0\OnCarVManager.Domain.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.csproj.AssemblyReference.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.AssemblyInfoInputs.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.AssemblyInfo.cs
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\refint\OnCarVManager.Domain.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\OnCarVManager.Domain.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Domain\obj\Debug\net6.0\ref\OnCarVManager.Domain.dll

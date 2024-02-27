@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnCarVManager.Domain\OnCarVManager.Domain.csproj" />
+    <ProjectReference Include="..\OnCarVManager.Infra.Data\OnCarVManager.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

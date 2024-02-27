@@ -1,0 +1,12 @@
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\bin\Debug\net6.0\OnCarVManager.Application.Abstraction.deps.json
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\bin\Debug\net6.0\OnCarVManager.Application.Abstraction.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\bin\Debug\net6.0\OnCarVManager.Application.Abstraction.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.csproj.AssemblyReference.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.AssemblyInfoInputs.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.AssemblyInfo.cs
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.csproj.CoreCompileInputs.cache
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\refint\OnCarVManager.Application.Abstraction.dll
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\OnCarVManager.Application.Abstraction.pdb
+C:\Users\Escritório\Documents\Projetos\OnCarTest\OnCarVManager.Application.Abstraction\obj\Debug\net6.0\ref\OnCarVManager.Application.Abstraction.dll

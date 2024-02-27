@@ -1,0 +1,68 @@
+<div class="container pt-3">
+    <div class="row">
+        <div class="text-center">
+            <h1>Gerenciador de Veículos</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-end">
+            <button class="btn btn-outline-secondary col-12 col-md-3 " (click)="ShowAddCarForm()">
+                <i class="bi bi-plus-lg"></i>
+                Adicionar carro
+            </button>
+        </div>
+        <app-add-car-form *ngIf="showAddCar" (addCarEmmiter)="UpdateCarList($event)"
+            (closeAddCarFormEmmiter)="ShowAddCarForm()"></app-add-car-form>
+
+    </div>
+
+
+    <div class="row">
+        <table class="table" *ngIf="carList.length">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Cor</th>
+                    <th>Preço</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let car of carList; let i = index" class="col-12">
+                <tr>
+                    <th>{{car.id}}</th>
+                    <td>{{car.model}}</td>
+                    <td>{{car.brand}}</td>
+                    <td>{{car.color}}</td>
+                    <td>{{car.price}}</td>
+                    <td>
+                        <div class="d-inline-flex gap-1">
+                            
+                            <button class="btn btn-outline-danger btn-sm" (click)="RemoveCar(car)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                            <button class="btn btn-outline-success btn-sm"
+                                (click)="ShowFinanceSimulator(i)">
+                                <i class="bi bi-coin"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr *ngIf="i == showFinanceSimulatorNum">
+                    <td colspan="6">
+                        <div >
+                            <br>
+                            <app-finance-simulator [car]="carList[i]"></app-finance-simulator>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="text-center" *ngIf="!carList.length">Não há nenhum veículo registrado</h2>
+    </div>
+</div>
+
+<app-custom-modal>
+    <app-finance-simulator></app-finance-simulator>
+</app-custom-modal>
