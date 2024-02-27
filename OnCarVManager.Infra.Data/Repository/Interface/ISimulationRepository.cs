@@ -2,7 +2,7 @@
 
 namespace OnCarVManager.Infra.Data.Repository.Interface
 {
-    public interface ICarRepository : IRepository<Car>
+    public interface ISimulationRepository : IRepository<Simulation>
     {
     }
 }
