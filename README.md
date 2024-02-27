@@ -2,23 +2,24 @@
 Siga os passos para rodar a aplicação. 
 Front-End desenvolvido utilizando Visual Studio Code 2022 e Back-end no Visual Studio 2022 
 
-Tecnologias utilizadas
+**Tecnologias utilizadas**
 ______________________________________________________________
 **Front-end**
-Angular 15.2.0
-Node 18.14.2
-Bootstrap 5.3.3
-Bootstrap-icons 1.11.3
-Sweetalert2 11.10.5
+- Angular 15.2.0
+- Node 18.14.2
+- Bootstrap 5.3.3
+- Bootstrap-icons 1.11.3
+- Sweetalert2 11.10.5
 
 **Back-end**
-.Net 6.0
-EF Core 6.0.27
-NewtonsoftJson 6.0.27
-SQL-Server 16.0.10
+- .Net 6.0
+- EF Core 6.0.27
+- NewtonsoftJson 6.0.27
+- SQL-Server 16.0.10
 
 
-Pre-requisito
+
+**Pre-requisito**
 ______________________________________________________________
 
 Instalar Dotnet EF versao 6.0.12
@@ -42,7 +43,7 @@ ______________________________________________________________
 	dotnet ef database update (Este comando irá criar as duas entidades necessárias no sql server)
 
 
-Executando Projeto para teste
+**Executando Projeto para teste**
 ______________________________________________________________
 
 1 - Ambos projetam devem rodar juntos, tanto a camada OnCarVManager.API quanto o projeto em front-end.
