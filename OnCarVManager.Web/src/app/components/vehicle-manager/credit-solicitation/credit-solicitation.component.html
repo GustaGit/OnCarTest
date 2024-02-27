@@ -1,51 +1,47 @@
-<form class="row py-3 mx-4 my-2 border justify-content-center rounded">
+<form [formGroup]="creditSolicitationForm" class="row py-3 mx-4 my-2 border justify-content-center rounded">
     <div class="col-12 col-md-5 justify-content-center">
         <div class="mb-2">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-
-        <div class="mb-2">
-            <label for="nameHero" class="form-label">Nome de Herói</label>
-            <input type="text" class="form-control" id="nameHero">
-        </div>
-
-        <div class="mb-2">
-            <label for="weight" class="form-label">Peso</label>
-            <input type="number" class="form-control" id="weight">
-        </div>
-    </div>
-
-    <div class="col-12 col-md-5 justify-content-center">
-        <div class="mb-2">
-            <input type="checkbox" id="inputDtNascimento">
-            <label for="dtNascimento" class="form-label">Data de Nascimento</label>
-            <input type="date" class="form-control" id="dtNascimento">
-        </div>
-
-        <div class="mb-2">
-            <label for="height" class="form-label">Altura</label>
-            <input type="number" class="form-control" id="height">
-        </div>
-
-        <div class="mb-2 col-12 justify-content-center ">
-            <div class="row">
-                <label class="form-label">Super-poderes:</label>
-                <div class="row" >
-
-                    <div class="form-check col-12 col-sm-6 col-md-12 col-lg-6" >
-                        <input type="checkbox">
-                        <label  class="form-label"></label>
-                    </div>
-                </div>
+            <label for="carModel" class="form-label">Modelo</label>
+            <input formControlName="model" type="text" class="form-control" id="carModel"
+                [ngClass]="{'invalid':creditSolicitationForm.get('model')?.errors  && (creditSolicitationForm.get('model')?.dirty || creditSolicitationForm.get('model')?.touched) }" />
+            <div *ngIf="creditSolicitationForm.controls['model']?.invalid && (creditSolicitationForm.controls['model']?.dirty || creditSolicitationForm.controls['model']?.touched)"
+                class="invalid">
+                Campo Obrigatório
             </div>
         </div>
 
+        <div class="mb-2">
+            <label for="carBrand" class="form-label">Marca</label>
+            <input formControlName="brand" type="text" class="form-control" id="carBrand"
+                [ngClass]="{'invalid':creditSolicitationForm.get('brand')?.errors  && (creditSolicitationForm.get('brand')?.dirty || creditSolicitationForm.get('brand')?.touched) }" />
+            <div *ngIf="creditSolicitationForm.controls['brand']?.invalid && (creditSolicitationForm.controls['brand']?.dirty || creditSolicitationForm.controls['brand']?.touched)"
+                class="invalid">
+                Campo Obrigatório
+            </div>
+        </div>
 
+        <div class="mb-2">
+            <label for="carColor" class="form-label">Cor</label>
+            <input formControlName="color" type="text" class="form-control" id="carColor"
+                [ngClass]="{'invalid':creditSolicitationForm.get('color')?.errors  && (creditSolicitationForm.get('color')?.dirty || creditSolicitationForm.get('color')?.touched) }" />
+            <div *ngIf="creditSolicitationForm.controls['color']?.invalid && (creditSolicitationForm.controls['color']?.dirty || creditSolicitationForm.controls['color']?.touched)"
+                class="invalid">
+                Campo Obrigatório
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="carPrice" class="form-label">Preço</label>
+            <input formControlName="price" type="text" class="form-control" id="carPrice"
+                [ngClass]="{'invalid':creditSolicitationForm.get('price')?.errors  && (creditSolicitationForm.get('price')?.dirty || creditSolicitationForm.get('price')?.touched) }" />
+            <div *ngIf="creditSolicitationForm.controls['price']?.invalid && (creditSolicitationForm.controls['price']?.dirty || creditSolicitationForm.controls['price']?.touched)"
+                class="invalid">
+                Campo Obrigatório
+            </div>
+        </div>
     </div>
 
-
     <div class="row justify-content-center my-2">
-        <button type="submit" class="btn btn-success col-5">Confirmar</button>
+        <button type="button" [disabled]="!this.creditSolicitationForm.valid" class="btn btn-secondary col-5"
+            (click)="ConfirmClick()">Confirmar</button>
     </div>
 </form>

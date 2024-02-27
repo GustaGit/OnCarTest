@@ -12,8 +12,8 @@ using OnCarVManager.Infra.Data.Context;
 namespace OnCarVManager.Infra.Data.Migrations
 {
     [DbContext(typeof(OnCarVManagerContext))]
-    [Migration("20240227033530_createDb")]
-    partial class createDb
+    [Migration("20240227121013_createDB")]
+    partial class createDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,8 +63,9 @@ namespace OnCarVManager.Infra.Data.Migrations
                     b.Property<DateTime>("Birthdate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DocumentCPF")
-                        .HasColumnType("int");
+                    b.Property<string>("DocumentCPF")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -73,8 +74,9 @@ namespace OnCarVManager.Infra.Data.Migrations
                     b.Property<int>("FamilyIncome")
                         .HasColumnType("int");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
