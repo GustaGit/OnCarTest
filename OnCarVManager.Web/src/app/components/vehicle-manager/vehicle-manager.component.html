@@ -47,8 +47,11 @@
                                 <i class="bi bi-coin"></i>
                             </button>
                         </div>
-
-                        <div *ngIf="i == showFinanceSimulatorNum">
+                    </td>
+                </tr>
+                <tr *ngIf="i == showFinanceSimulatorNum">
+                    <td colspan="6">
+                        <div >
                             <br>
                             <app-finance-simulator [car]="carList[i]"></app-finance-simulator>
                         </div>
