@@ -59,12 +59,26 @@
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="mb-2">
+                    <label for="documentCPF" class="form-label">CPF*</label>
+                    <input type="number" class="form-control" id="documentCPF" formControlName="documentCPF"
+                        [ngClass]="{'invalid':formFinanceSimulator.get('documentCPF')?.errors  && (formFinanceSimulator.get('documentCPF')?.dirty || formFinanceSimulator.get('documentCPF')?.touched) }" />
+                    <div *ngIf="formFinanceSimulator.controls['documentCPF']?.invalid && (formFinanceSimulator.controls['documentCPF']?.dirty || formFinanceSimulator.controls['documentCPF']?.touched)"
+                        class="invalid">
+                        Campo Obrigatório
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row justify-content-center my-2">
             <button type="button" class="btn btn-success col-12 col-md-5" [disabled]="!formFinanceSimulator.valid" (click)="Simulate()">Confirmar</button>
         </div>
+
+        <!-- <app-simulator-result *ngIf="userSimulation.name" [user]="userSimulation"></app-simulator-result> -->
+        <app-simulator-result [user]="userTest"></app-simulator-result>
     </form>
 </div>

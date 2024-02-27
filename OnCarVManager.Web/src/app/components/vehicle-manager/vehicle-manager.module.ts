@@ -9,6 +9,8 @@ import { AddCarFormComponent } from './add-car-form/add-car-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CustomModalComponent } from '../custom-modal/custom-modal.component';
 import { SimulationService } from 'src/app/services/finance-simulator/simulation.service';
+import { SimulatorResultComponent } from './finance-simulator/simulator-result/simulator-result.component';
+import { SimulatorConstants } from './finance-simulator/simulator-result/constants/simulator-constants';
 
 
 
@@ -18,7 +20,8 @@ import { SimulationService } from 'src/app/services/finance-simulator/simulation
     CreditSolicitationComponent,
     FinanceSimulatorComponent,
     AddCarFormComponent,
-    CustomModalComponent
+    CustomModalComponent,
+    SimulatorResultComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { SimulationService } from 'src/app/services/finance-simulator/simulation
   ],
    providers: [
     VehicleManagerService,
-    SimulationService
+    SimulationService,
+    SimulatorConstants
   ],
   exports:[
     VehicleManagerComponent
