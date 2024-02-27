@@ -33,7 +33,7 @@ dotnet tool install --global dotnet-ef --version 6.0.27
 tenha outro nome, devera ser alterado nas connections strings, no appsettings.development da camada de API)
 
 
-Executar Migrations
+**Executar Migrations**
 ______________________________________________________________
 
 1 - Abrir menu View, Other Window, click em Package Manager Console
