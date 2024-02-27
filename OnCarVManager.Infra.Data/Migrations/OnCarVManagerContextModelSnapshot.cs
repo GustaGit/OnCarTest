@@ -61,8 +61,9 @@ namespace OnCarVManager.Infra.Data.Migrations
                     b.Property<DateTime>("Birthdate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DocumentCPF")
-                        .HasColumnType("int");
+                    b.Property<string>("DocumentCPF")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -71,8 +72,9 @@ namespace OnCarVManager.Infra.Data.Migrations
                     b.Property<int>("FamilyIncome")
                         .HasColumnType("int");
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");

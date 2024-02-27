@@ -1,5 +1,5 @@
 export class Simulation{
-    documentCPF:number = 0;
+    documentCPF:string = '';
     phone:string = '';
     email:string = '';
     birthdate:Date = new Date();

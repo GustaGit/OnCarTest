@@ -2,7 +2,7 @@
 {
     public class SimulationResponse
     {
-        public int DocumentCPF { get; set; }
+        public string DocumentCPF { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public DateTime Birthdate { get; set; }
