@@ -3,7 +3,7 @@
     public class SimulationResponse
     {
         public int DocumentCPF { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
         public DateTime Birthdate { get; set; }
         public int FamilyIncome { get; set; }

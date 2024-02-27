@@ -1,6 +1,6 @@
 export class User {
     documentCPF: number = 0;
-    phone: number = 0;
+    phone: string = '';
     email: string = '';
     birthdate: Date = new Date();
     familyIncome: number = 0;
