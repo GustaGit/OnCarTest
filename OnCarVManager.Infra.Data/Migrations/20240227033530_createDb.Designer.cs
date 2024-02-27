@@ -12,8 +12,8 @@ using OnCarVManager.Infra.Data.Context;
 namespace OnCarVManager.Infra.Data.Migrations
 {
     [DbContext(typeof(OnCarVManagerContext))]
-    [Migration("20240227031618_creatingDB")]
-    partial class creatingDB
+    [Migration("20240227033530_createDb")]
+    partial class createDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,6 +43,9 @@ namespace OnCarVManager.Infra.Data.Migrations
                     b.Property<string>("model")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("price")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 

@@ -18,7 +18,7 @@
 
 
     <div class="row">
-        <table class="table">
+        <table class="table" *ngIf="carList.length">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -59,6 +59,7 @@
                 </tr>
             </tbody>
         </table>
+        <h2 class="text-center" *ngIf="!carList.length">Não há nenhum veículo registrado</h2>
     </div>
 </div>
 

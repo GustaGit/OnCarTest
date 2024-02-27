@@ -33,6 +33,6 @@ export class FinanceSimulatorComponent {
 
     var simulation: Simulation = this.formFinanceSimulator.value;
     simulation.price = this.car.price;
-    this.userSimulation = this.simulationService.AddSimulationTest(simulation);
+    this.simulationService.AddSimulation(simulation).subscribe((response:User)=>this.userSimulation = response);
   }
 }

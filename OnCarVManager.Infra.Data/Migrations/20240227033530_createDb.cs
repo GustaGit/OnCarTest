@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace OnCarVManager.Infra.Data.Migrations
 {
-    public partial class creatingDB : Migration
+    public partial class createDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,8 @@ namespace OnCarVManager.Infra.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     model = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    color = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    price = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

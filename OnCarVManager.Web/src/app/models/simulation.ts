@@ -1,4 +1,5 @@
 export class Simulation{
+    id=0;
     documentCPF:number = 0;
     phone:number = 0;
     email:string = '';

@@ -42,6 +42,9 @@ namespace OnCarVManager.Infra.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("price")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
 
                     b.ToTable("Cars");

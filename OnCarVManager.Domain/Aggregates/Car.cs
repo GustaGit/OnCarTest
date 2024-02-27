@@ -12,6 +12,7 @@ namespace OnCarVManager.Domain.Aggregates
         public string model { get; set; }
         public string brand { get; set; }
         public string color { get; set; }
+        public int price { get; set; }
 
     }
 }

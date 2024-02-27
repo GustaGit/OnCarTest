@@ -24,6 +24,7 @@ export class VehicleManagerComponent implements OnInit {
   ngOnInit(): void {
     this.carService.GetAllCars().subscribe((cars: Car[]) => {
       this.carList = cars;
+      console.log(this.carList)
     });
   }
 
